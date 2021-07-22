@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import styled from "styled-components";
+import TodoEntry from "./components/TodoEntry";
+import TodoLists from "./components/TodoLists";
+
+const MainSection = styled.section`
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  border: 1px solid black;
+  .headingTitle {
+    text-align: center;
+    background: #cdf0ea;
+    // color: white;
+    width: 100%;
+    padding: 1rem;
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainSection>
+      <div className="headingTitle">Todo App</div>
+      <TodoEntry />
+      <TodoLists />
+    </MainSection>
   );
 }
 
