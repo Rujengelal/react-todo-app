@@ -19,7 +19,7 @@ test('test if todoDescription  is empty',()=>{
 
 })
 
-test("Enter a todo and remove it",()=>{
+test("Enter a todo, complete it  and remove it",()=>{
     const {getByTestId,queryAllByTestId}=render(<StoreContextProvider><App/></StoreContextProvider>)
 
     const todoTitle=getByTestId("todoTitle")
