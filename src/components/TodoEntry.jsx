@@ -27,6 +27,7 @@ function TodoEntry() {
         type="text"
         name="todoTitle"
         value={todoTitle}
+        data-testid="todoTitle"
         onChange={(e) => {
           setTodoTitle(e.target.value);
         }}
@@ -37,6 +38,8 @@ function TodoEntry() {
       <input
         type="text"
         name="todoDescription"
+        data-testid="todoDescription"
+
         value={todoDesc}
         onChange={(e) => {
           setTodoDesc(e.target.value);
@@ -44,6 +47,7 @@ function TodoEntry() {
       />
       <br />
       <button
+      data-testid="todoAddBtn"
         onClick={(e) => {
           console.log("Add button clicked");
           console.log({ todoTitle, todoDesc });

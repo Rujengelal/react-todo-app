@@ -37,7 +37,8 @@ function ListItem({
 }) {
   return (
     <ListContainer>
-      <div className="listItemDetails">
+      <div className="listItemDetails"
+      data-testid="todoItem">
         <h4 className={completed ? "completed" : ""}>{` ${title}`}</h4>
         <p className={completed ? "completed" : ""}>{description}</p>
         {/* <p>Completed: {completed ? "Yes" : "No"}</p>
@@ -47,10 +48,14 @@ function ListItem({
         <input
           type="checkbox"
           name="complete"
+        data-testid="completedButton"
+
           defaultChecked={completed}
           onChange={statusChange}
         />
-        <button onClick={removeItem}>X</button>
+        <button 
+        data-testid="removeButton"
+        onClick={removeItem}>X</button>
       </div>
     </ListContainer>
   );
